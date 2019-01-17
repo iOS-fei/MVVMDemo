@@ -1,25 +1,26 @@
 //
-//  ViewController.m
+//  MainViewController.m
 //  MVVMDemo
 //
 //  Created by 张飞 on 2019/1/17.
 //  Copyright © 2019 张飞. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"首页";
-    NSLog(@"测试食醋恶不");
-    NSLog(@"xxx");
+    
 }
+
 
 
 @end

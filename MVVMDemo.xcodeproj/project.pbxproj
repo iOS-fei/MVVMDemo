@@ -3,17 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2722413E06F199ABA85F7AA1 /* Pods_MVVMDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34831DC69699C2278743B718 /* Pods_MVVMDemo.framework */; };
 		54FDD2DC21F06E2B00F70551 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDD2DB21F06E2B00F70551 /* AppDelegate.m */; };
-		54FDD2DF21F06E2B00F70551 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDD2DE21F06E2B00F70551 /* ViewController.m */; };
-		54FDD2E221F06E2B00F70551 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FDD2E021F06E2B00F70551 /* Main.storyboard */; };
 		54FDD2E421F06E6100F70551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FDD2E321F06E6100F70551 /* Assets.xcassets */; };
-		54FDD2E721F06E6100F70551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FDD2E521F06E6100F70551 /* LaunchScreen.storyboard */; };
 		54FDD2EA21F06E6200F70551 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDD2E921F06E6200F70551 /* main.m */; };
+		54FDD2F221F085EA00F70551 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDD2F121F085EA00F70551 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +21,11 @@
 		54FDD2D721F06E2B00F70551 /* MVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FDD2DA21F06E2B00F70551 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54FDD2DB21F06E2B00F70551 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		54FDD2DD21F06E2B00F70551 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		54FDD2DE21F06E2B00F70551 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		54FDD2E121F06E2B00F70551 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54FDD2E321F06E6100F70551 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		54FDD2E621F06E6100F70551 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54FDD2E821F06E6200F70551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54FDD2E921F06E6200F70551 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		54FDD2F021F085EA00F70551 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		54FDD2F121F085EA00F70551 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +71,9 @@
 			children = (
 				54FDD2DA21F06E2B00F70551 /* AppDelegate.h */,
 				54FDD2DB21F06E2B00F70551 /* AppDelegate.m */,
-				54FDD2DD21F06E2B00F70551 /* ViewController.h */,
-				54FDD2DE21F06E2B00F70551 /* ViewController.m */,
-				54FDD2E021F06E2B00F70551 /* Main.storyboard */,
+				54FDD2F021F085EA00F70551 /* MainViewController.h */,
+				54FDD2F121F085EA00F70551 /* MainViewController.m */,
 				54FDD2E321F06E6100F70551 /* Assets.xcassets */,
-				54FDD2E521F06E6100F70551 /* LaunchScreen.storyboard */,
 				54FDD2E821F06E6200F70551 /* Info.plist */,
 				54FDD2E921F06E6200F70551 /* main.m */,
 			);
@@ -129,11 +123,12 @@
 				TargetAttributes = {
 					54FDD2D621F06E2B00F70551 = {
 						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 54FDD2D221F06E2A00F70551 /* Build configuration list for PBXProject "MVVMDemo" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -155,9 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54FDD2E721F06E6100F70551 /* LaunchScreen.storyboard in Resources */,
 				54FDD2E421F06E6100F70551 /* Assets.xcassets in Resources */,
-				54FDD2E221F06E2B00F70551 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,32 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54FDD2DF21F06E2B00F70551 /* ViewController.m in Sources */,
 				54FDD2EA21F06E6200F70551 /* main.m in Sources */,
+				54FDD2F221F085EA00F70551 /* MainViewController.m in Sources */,
 				54FDD2DC21F06E2B00F70551 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		54FDD2E021F06E2B00F70551 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				54FDD2E121F06E2B00F70551 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		54FDD2E521F06E6100F70551 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				54FDD2E621F06E6100F70551 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		54FDD2EB21F06E6200F70551 /* Debug */ = {
@@ -379,14 +353,12 @@
 			baseConfigurationReference = 2A86155463F9684F2F9AAA42 /* Pods-MVVMDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RZAPDW63A9;
 				INFOPLIST_FILE = MVVMDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yto.MVVMDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -398,14 +370,12 @@
 			baseConfigurationReference = 1715B6934B0E4368A1751380 /* Pods-MVVMDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RZAPDW63A9;
 				INFOPLIST_FILE = MVVMDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yto.MVVMDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
