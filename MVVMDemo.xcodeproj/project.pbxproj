@@ -11,6 +11,10 @@
 		541F5A8821F1789F00D6FBC3 /* BaseCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A8221F1789E00D6FBC3 /* BaseCellViewModel.m */; };
 		541F5A8921F1789F00D6FBC3 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A8521F1789E00D6FBC3 /* BaseTableViewCell.m */; };
 		541F5A8A21F1789F00D6FBC3 /* BaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A8721F1789F00D6FBC3 /* BaseCollectionViewCell.m */; };
+		541F5A9121F17C2F00D6FBC3 /* MyOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A8F21F17C2E00D6FBC3 /* MyOrderTableViewCell.m */; };
+		541F5A9221F17C2F00D6FBC3 /* MyOrderCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A9021F17C2F00D6FBC3 /* MyOrderCellViewModel.m */; };
+		541F5A9621F17C8F00D6FBC3 /* XYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A9521F17C8F00D6FBC3 /* XYButton.m */; };
+		541F5A9A21F199A000D6FBC3 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A9821F199A000D6FBC3 /* UIViewExt.m */; };
 		54FDD2DC21F06E2B00F70551 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDD2DB21F06E2B00F70551 /* AppDelegate.m */; };
 		54FDD2E421F06E6100F70551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FDD2E321F06E6100F70551 /* Assets.xcassets */; };
 		54FDD2EA21F06E6200F70551 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDD2E921F06E6200F70551 /* main.m */; };
@@ -27,6 +31,15 @@
 		541F5A8521F1789E00D6FBC3 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		541F5A8621F1789E00D6FBC3 /* BaseCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCellViewModel.h; sourceTree = "<group>"; };
 		541F5A8721F1789F00D6FBC3 /* BaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewCell.m; sourceTree = "<group>"; };
+		541F5A8C21F17B6D00D6FBC3 /* YTOConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTOConst.h; sourceTree = "<group>"; };
+		541F5A8D21F17C2E00D6FBC3 /* MyOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderTableViewCell.h; sourceTree = "<group>"; };
+		541F5A8E21F17C2E00D6FBC3 /* MyOrderCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderCellViewModel.h; sourceTree = "<group>"; };
+		541F5A8F21F17C2E00D6FBC3 /* MyOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderTableViewCell.m; sourceTree = "<group>"; };
+		541F5A9021F17C2F00D6FBC3 /* MyOrderCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderCellViewModel.m; sourceTree = "<group>"; };
+		541F5A9421F17C8F00D6FBC3 /* XYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYButton.h; sourceTree = "<group>"; };
+		541F5A9521F17C8F00D6FBC3 /* XYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYButton.m; sourceTree = "<group>"; };
+		541F5A9821F199A000D6FBC3 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		541F5A9921F199A000D6FBC3 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
 		54FDD2D721F06E2B00F70551 /* MVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FDD2DA21F06E2B00F70551 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54FDD2DB21F06E2B00F70551 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +73,7 @@
 		541F5A8021F1772700D6FBC3 /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
+				541F5A8B21F17A7700D6FBC3 /* MyOrderTableViewCell */,
 				541F5A8121F1785E00D6FBC3 /* Common */,
 			);
 			path = ReusableView;
@@ -76,6 +90,35 @@
 				541F5A8521F1789E00D6FBC3 /* BaseTableViewCell.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		541F5A8B21F17A7700D6FBC3 /* MyOrderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				541F5A8E21F17C2E00D6FBC3 /* MyOrderCellViewModel.h */,
+				541F5A9021F17C2F00D6FBC3 /* MyOrderCellViewModel.m */,
+				541F5A8D21F17C2E00D6FBC3 /* MyOrderTableViewCell.h */,
+				541F5A8F21F17C2E00D6FBC3 /* MyOrderTableViewCell.m */,
+			);
+			path = MyOrderTableViewCell;
+			sourceTree = "<group>";
+		};
+		541F5A9321F17C8F00D6FBC3 /* XYButton */ = {
+			isa = PBXGroup;
+			children = (
+				541F5A9421F17C8F00D6FBC3 /* XYButton.h */,
+				541F5A9521F17C8F00D6FBC3 /* XYButton.m */,
+			);
+			path = XYButton;
+			sourceTree = "<group>";
+		};
+		541F5A9721F199A000D6FBC3 /* UIView+Extend */ = {
+			isa = PBXGroup;
+			children = (
+				541F5A9821F199A000D6FBC3 /* UIViewExt.m */,
+				541F5A9921F199A000D6FBC3 /* UIViewExt.h */,
+			);
+			path = "UIView+Extend";
 			sourceTree = "<group>";
 		};
 		54FDD2CE21F06E2A00F70551 = {
@@ -99,6 +142,9 @@
 		54FDD2D921F06E2B00F70551 /* MVVMDemo */ = {
 			isa = PBXGroup;
 			children = (
+				541F5A8C21F17B6D00D6FBC3 /* YTOConst.h */,
+				541F5A9721F199A000D6FBC3 /* UIView+Extend */,
+				541F5A9321F17C8F00D6FBC3 /* XYButton */,
 				541F5A8021F1772700D6FBC3 /* ReusableView */,
 				54FDD2DA21F06E2B00F70551 /* AppDelegate.h */,
 				54FDD2DB21F06E2B00F70551 /* AppDelegate.m */,
@@ -259,11 +305,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				541F5A8921F1789F00D6FBC3 /* BaseTableViewCell.m in Sources */,
+				541F5A9621F17C8F00D6FBC3 /* XYButton.m in Sources */,
+				541F5A9A21F199A000D6FBC3 /* UIViewExt.m in Sources */,
 				541F5A8A21F1789F00D6FBC3 /* BaseCollectionViewCell.m in Sources */,
+				541F5A9121F17C2F00D6FBC3 /* MyOrderTableViewCell.m in Sources */,
 				54FDD2EA21F06E6200F70551 /* main.m in Sources */,
 				541F5A8821F1789F00D6FBC3 /* BaseCellViewModel.m in Sources */,
 				54FDD2F221F085EA00F70551 /* MainViewController.m in Sources */,
 				54FDD2DC21F06E2B00F70551 /* AppDelegate.m in Sources */,
+				541F5A9221F17C2F00D6FBC3 /* MyOrderCellViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
