@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2722413E06F199ABA85F7AA1 /* Pods_MVVMDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34831DC69699C2278743B718 /* Pods_MVVMDemo.framework */; };
+		541F5A8821F1789F00D6FBC3 /* BaseCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A8221F1789E00D6FBC3 /* BaseCellViewModel.m */; };
+		541F5A8921F1789F00D6FBC3 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A8521F1789E00D6FBC3 /* BaseTableViewCell.m */; };
+		541F5A8A21F1789F00D6FBC3 /* BaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A8721F1789F00D6FBC3 /* BaseCollectionViewCell.m */; };
 		54FDD2DC21F06E2B00F70551 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDD2DB21F06E2B00F70551 /* AppDelegate.m */; };
 		54FDD2E421F06E6100F70551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FDD2E321F06E6100F70551 /* Assets.xcassets */; };
 		54FDD2EA21F06E6200F70551 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDD2E921F06E6200F70551 /* main.m */; };
@@ -18,6 +21,12 @@
 		1715B6934B0E4368A1751380 /* Pods-MVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMDemo/Pods-MVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2A86155463F9684F2F9AAA42 /* Pods-MVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMDemo/Pods-MVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		34831DC69699C2278743B718 /* Pods_MVVMDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		541F5A8221F1789E00D6FBC3 /* BaseCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCellViewModel.m; sourceTree = "<group>"; };
+		541F5A8321F1789E00D6FBC3 /* BaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewCell.h; sourceTree = "<group>"; };
+		541F5A8421F1789E00D6FBC3 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		541F5A8521F1789E00D6FBC3 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		541F5A8621F1789E00D6FBC3 /* BaseCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCellViewModel.h; sourceTree = "<group>"; };
+		541F5A8721F1789F00D6FBC3 /* BaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewCell.m; sourceTree = "<group>"; };
 		54FDD2D721F06E2B00F70551 /* MVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FDD2DA21F06E2B00F70551 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54FDD2DB21F06E2B00F70551 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,6 +57,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		541F5A8021F1772700D6FBC3 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				541F5A8121F1785E00D6FBC3 /* Common */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
+		541F5A8121F1785E00D6FBC3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				541F5A8621F1789E00D6FBC3 /* BaseCellViewModel.h */,
+				541F5A8221F1789E00D6FBC3 /* BaseCellViewModel.m */,
+				541F5A8321F1789E00D6FBC3 /* BaseCollectionViewCell.h */,
+				541F5A8721F1789F00D6FBC3 /* BaseCollectionViewCell.m */,
+				541F5A8421F1789E00D6FBC3 /* BaseTableViewCell.h */,
+				541F5A8521F1789E00D6FBC3 /* BaseTableViewCell.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		54FDD2CE21F06E2A00F70551 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +99,7 @@
 		54FDD2D921F06E2B00F70551 /* MVVMDemo */ = {
 			isa = PBXGroup;
 			children = (
+				541F5A8021F1772700D6FBC3 /* ReusableView */,
 				54FDD2DA21F06E2B00F70551 /* AppDelegate.h */,
 				54FDD2DB21F06E2B00F70551 /* AppDelegate.m */,
 				54FDD2F021F085EA00F70551 /* MainViewController.h */,
@@ -227,7 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				541F5A8921F1789F00D6FBC3 /* BaseTableViewCell.m in Sources */,
+				541F5A8A21F1789F00D6FBC3 /* BaseCollectionViewCell.m in Sources */,
 				54FDD2EA21F06E6200F70551 /* main.m in Sources */,
+				541F5A8821F1789F00D6FBC3 /* BaseCellViewModel.m in Sources */,
 				54FDD2F221F085EA00F70551 /* MainViewController.m in Sources */,
 				54FDD2DC21F06E2B00F70551 /* AppDelegate.m in Sources */,
 			);
