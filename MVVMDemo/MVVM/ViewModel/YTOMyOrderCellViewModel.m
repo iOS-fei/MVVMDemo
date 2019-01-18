@@ -21,10 +21,12 @@
         CGFloat waybillNoWidth = [waybillNoString boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 17) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin  attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17.f]} context:nil].size.width;
         self.waybillNoTextWidth = waybillNoWidth;
         
-        CGFloat addressHeight = [model.address  boundingRectWithSize:CGSizeMake(KScreenWidth - 30, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin  attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17.f]} context:nil].size.height;
-        self.addressTextHeight = addressHeight;
+        [[RACObserve(self.mainModel, address) distinctUntilChanged] subscribeNext:^(NSString* x) {
+            CGFloat addressHeight = [x boundingRectWithSize:CGSizeMake(KScreenWidth - 30, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin  attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17.f]} context:nil].size.height;
+            self.addressTextHeight = addressHeight;
+            self.rowHeight = 45 + self.addressTextHeight + 22;
+        }];
         
-        self.rowHeight = 45 + addressHeight + 22;
         [self bindSignals];
     }
     return self;

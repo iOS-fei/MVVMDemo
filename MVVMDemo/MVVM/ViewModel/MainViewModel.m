@@ -65,6 +65,15 @@
     self.failureBlock([NSString stringWithFormat:@"复制成功: %@",cellVM.mainModel.server_hawbcode]);
 }
 
+- (void)didSelectRowWithIndex:(NSInteger)index
+{
+    YTOMyOrderCellViewModel *cellVM = self.listArr[index];
+    MainModel *mainModel = cellVM.mainModel;
+    mainModel.address = @"我是会改变的!";
+    [self loadData];
+    self.failureBlock(@"修改收件地址成功!");
+}
+
 #pragma mark - lazy
 
 -(NSMutableArray *)listArr

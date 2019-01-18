@@ -35,6 +35,13 @@ typedef void(^YTOFailureBlock) (NSString *errorMsg);
  */
 - (void)copyWaybillNoWithIndex:(NSInteger)index;
 
+/**
+ 点击了cell某一行
+
+ @param index 行
+ */
+- (void)didSelectRowWithIndex:(NSInteger)index;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -65,7 +65,6 @@
     MyOrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellViewModel.cellName];
     if (cell==nil) {
         cell = [[MyOrderTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellViewModel.cellName];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     __weak typeof(self) weakSelf = self;
     [[cellViewModel.waybillNoPasteSignal takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id  _Nullable x) {
@@ -73,6 +72,11 @@
     }];
     [cell bindWithViewModel:cellViewModel];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.vm didSelectRowWithIndex:indexPath.row];
 }
 
 #pragma mark - lazy load
