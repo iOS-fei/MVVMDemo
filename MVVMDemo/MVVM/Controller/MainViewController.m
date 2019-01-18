@@ -65,7 +65,12 @@
     MyOrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellViewModel.cellName];
     if (cell==nil) {
         cell = [[MyOrderTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellViewModel.cellName];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    __weak typeof(self) weakSelf = self;
+    [[cellViewModel.waybillNoPasteSignal takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id  _Nullable x) {
+        [weakSelf.vm copyWaybillNoWithIndex:indexPath.row];
+    }];
     [cell bindWithViewModel:cellViewModel];
     return cell;
 }

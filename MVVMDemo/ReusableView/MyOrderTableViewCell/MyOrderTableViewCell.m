@@ -59,7 +59,7 @@
     
     
     XYButton *waybillNoPasteIconButton = [XYButton buttonWithType:UIButtonTypeCustom];
-    waybillNoPasteIconButton.backgroundColor = [UIColor yellowColor];
+    waybillNoPasteIconButton.backgroundColor = [UIColor whiteColor];
     waybillNoPasteIconButton.frame = CGRectMake(0, 0, 60, 27);
     waybillNoPasteIconButton.imageRect = CGRectMake(13, 1, 25, 25);
     [self.contentView addSubview:waybillNoPasteIconButton];
@@ -92,11 +92,13 @@
 
 -(void)bindWithViewModel:(MyOrderCellViewModel *)viewModel
 {
-    __weak typeof(self) weakSelf = self;
+    //修改复制按钮的 x坐标
+    self.waybillNoPasteIconButton.x = viewModel.waybillNoTextWidth+20;
     self.addressLabel.height = viewModel.addressTextHeight;
     
      RAC(self.waybillNoLabel,text) = [viewModel.waybillNoSignal takeUntil:self.rac_prepareForReuseSignal];
     
+    __weak typeof(self) weakSelf = self;
     [[viewModel.waybillNoPasteIconSignal takeUntil:self.rac_prepareForReuseSignal] subscribeNext:^(id  _Nullable x) {
         [weakSelf.waybillNoPasteIconButton setImage:x forState:UIControlStateNormal];
     }];

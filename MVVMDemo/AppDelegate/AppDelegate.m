@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "YTOConst.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //SVProgressHUD
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [SVProgressHUD setMinimumDismissTimeInterval:1.f];
+    [SVProgressHUD setMaximumDismissTimeInterval:2.5f];
+    [SVProgressHUD setCornerRadius:4];
+    [SVProgressHUD setFont:[UIFont systemFontOfSize:17.f]];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

@@ -12,9 +12,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MyOrderCellViewModel : BaseCellViewModel
 
+/**
+ 物流单号 文本宽度
+ */
+@property (nonatomic,assign,readonly) CGFloat waybillNoTextWidth;
+
 @property (nonatomic,strong) RACSignal *waybillNoSignal;//NSString
 
 @property (nonatomic,strong) RACSignal *waybillNoPasteIconSignal;//UIImage
+
+/**
+ 复制 物流单号 信号
+ */
+@property (nonatomic,strong) RACSubject *waybillNoPasteSignal;
 
 /**
  文本框输入的内容
@@ -30,13 +40,6 @@ NS_ASSUME_NONNULL_BEGIN
  地址 文本高度
  */
 @property (nonatomic,assign,readonly) CGFloat addressTextHeight;
-
-/**
- 复制 物流单号 信号
- */
-@property (nonatomic,strong) RACSubject *waybillNoPasteSignal;
-
-
 
 
 @end

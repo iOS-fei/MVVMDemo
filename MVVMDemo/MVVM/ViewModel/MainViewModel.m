@@ -55,6 +55,16 @@
     return self.listArr[index];
 }
 
+
+- (void)copyWaybillNoWithIndex:(NSInteger)index
+{
+    YTOMyOrderCellViewModel *cellVM = self.listArr[index];
+    
+    UIPasteboard* pasteboard = [UIPasteboard generalPasteboard];
+    [pasteboard setString:cellVM.mainModel.server_hawbcode];
+    self.failureBlock([NSString stringWithFormat:@"复制成功: %@",cellVM.mainModel.server_hawbcode]);
+}
+
 #pragma mark - lazy
 
 -(NSMutableArray *)listArr

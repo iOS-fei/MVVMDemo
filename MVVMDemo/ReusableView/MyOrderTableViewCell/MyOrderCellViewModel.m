@@ -18,4 +18,6 @@
     return _waybillNoPasteSignal;
 }
 
+
+
 @end

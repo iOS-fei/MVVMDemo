@@ -28,6 +28,12 @@ typedef void(^YTOFailureBlock) (NSString *errorMsg);
 
 - (BaseCellViewModel *)getCurrentCellViewModelWithIndex:(NSInteger)index;
 
+/**
+ 复制 物流单号
+ 
+ @param index 列表的索引
+ */
+- (void)copyWaybillNoWithIndex:(NSInteger)index;
 
 @end
 

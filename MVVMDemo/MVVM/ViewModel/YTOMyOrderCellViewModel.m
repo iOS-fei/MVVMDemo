@@ -9,7 +9,7 @@
 #import "YTOMyOrderCellViewModel.h"
 #import "MainModel.h"
 @implementation YTOMyOrderCellViewModel
-@synthesize addressTextHeight = _addressTextHeight;
+@synthesize waybillNoTextWidth = _waybillNoTextWidth,addressTextHeight = _addressTextHeight;
 
 - (instancetype)initWithMainModel:(MainModel *)model
 {
@@ -17,7 +17,11 @@
         self.cellName = @"MyOrderTableViewCell";
         self.mainModel = model;
         
-        CGFloat addressHeight = [model.address boundingRectWithSize:CGSizeMake(KScreenWidth - 30, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin  attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17.f]} context:nil].size.height;
+        NSString *waybillNoString = [NSString stringWithFormat:@"物流单号: %@",model.server_hawbcode];
+        CGFloat waybillNoWidth = [waybillNoString boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 17) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin  attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17.f]} context:nil].size.width;
+        self.waybillNoTextWidth = waybillNoWidth;
+        
+        CGFloat addressHeight = [model.address  boundingRectWithSize:CGSizeMake(KScreenWidth - 30, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin  attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17.f]} context:nil].size.height;
         self.addressTextHeight = addressHeight;
         
         self.rowHeight = 45 + addressHeight + 22;
@@ -60,6 +64,11 @@
 -(void)setMainModel:(MainModel * _Nonnull)mainModel
 {
     _mainModel = mainModel;
+}
+
+-(void)setWaybillNoTextWidth:(CGFloat)waybillNoTextWidth
+{
+    _waybillNoTextWidth = waybillNoTextWidth;
 }
 
 -(void)setAddressTextHeight:(CGFloat)addressTextHeight
