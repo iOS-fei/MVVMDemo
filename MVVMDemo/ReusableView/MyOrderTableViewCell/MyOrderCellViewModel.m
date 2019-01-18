@@ -10,5 +10,12 @@
 
 @implementation MyOrderCellViewModel
 
+- (RACSubject *)waybillNoPasteSignal
+{
+    if (!_waybillNoPasteSignal) {
+        _waybillNoPasteSignal = [RACSubject subject];
+    }
+    return _waybillNoPasteSignal;
+}
 
 @end

@@ -9,6 +9,9 @@
 #import "MainViewController.h"
 #import "YTOConst.h"
 #import "MainViewModel.h"
+#import "BaseTableViewCell.h"
+#import "MyOrderTableViewCell.h"
+#import "YTOMyOrderCellViewModel.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -46,16 +49,24 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.dataArray.count;
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BaseCellViewModel *cellVM = [self.vm getCurrentCellViewModelWithIndex:indexPath.row];
+    return cellVM.rowHeight;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifer = @"cell";
+    YTOMyOrderCellViewModel *cellViewModel =  (YTOMyOrderCellViewModel *)[self.vm getCurrentCellViewModelWithIndex:indexPath.row];
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer];
+    MyOrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellViewModel.cellName];
     if (cell==nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
+        cell = [[MyOrderTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellViewModel.cellName];
     }
+    [cell bindWithViewModel:cellViewModel];
     return cell;
 }
 
