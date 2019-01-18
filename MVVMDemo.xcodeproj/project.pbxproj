@@ -15,6 +15,10 @@
 		541F5A9221F17C2F00D6FBC3 /* MyOrderCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A9021F17C2F00D6FBC3 /* MyOrderCellViewModel.m */; };
 		541F5A9621F17C8F00D6FBC3 /* XYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A9521F17C8F00D6FBC3 /* XYButton.m */; };
 		541F5A9A21F199A000D6FBC3 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5A9821F199A000D6FBC3 /* UIViewExt.m */; };
+		541F5AA321F1A0CD00D6FBC3 /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5AA221F1A0CD00D6FBC3 /* MainViewModel.m */; };
+		541F5AA621F1A2E000D6FBC3 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5AA521F1A2E000D6FBC3 /* Util.m */; };
+		541F5AA921F1AD7C00D6FBC3 /* YTOMyOrderCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5AA821F1AD7C00D6FBC3 /* YTOMyOrderCellViewModel.m */; };
+		541F5AAC21F1ADB100D6FBC3 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5AAB21F1ADB100D6FBC3 /* MainModel.m */; };
 		54FDD2DC21F06E2B00F70551 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDD2DB21F06E2B00F70551 /* AppDelegate.m */; };
 		54FDD2E421F06E6100F70551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FDD2E321F06E6100F70551 /* Assets.xcassets */; };
 		54FDD2EA21F06E6200F70551 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDD2E921F06E6200F70551 /* main.m */; };
@@ -40,6 +44,14 @@
 		541F5A9521F17C8F00D6FBC3 /* XYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYButton.m; sourceTree = "<group>"; };
 		541F5A9821F199A000D6FBC3 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		541F5A9921F199A000D6FBC3 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		541F5AA121F1A0CD00D6FBC3 /* MainViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
+		541F5AA221F1A0CD00D6FBC3 /* MainViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
+		541F5AA421F1A2E000D6FBC3 /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		541F5AA521F1A2E000D6FBC3 /* Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		541F5AA721F1AD7C00D6FBC3 /* YTOMyOrderCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTOMyOrderCellViewModel.h; sourceTree = "<group>"; };
+		541F5AA821F1AD7C00D6FBC3 /* YTOMyOrderCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTOMyOrderCellViewModel.m; sourceTree = "<group>"; };
+		541F5AAA21F1ADB100D6FBC3 /* MainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
+		541F5AAB21F1ADB100D6FBC3 /* MainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		54FDD2D721F06E2B00F70551 /* MVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FDD2DA21F06E2B00F70551 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54FDD2DB21F06E2B00F70551 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,6 +133,65 @@
 			path = "UIView+Extend";
 			sourceTree = "<group>";
 		};
+		541F5A9B21F19FCA00D6FBC3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				541F5A9721F199A000D6FBC3 /* UIView+Extend */,
+				541F5A9321F17C8F00D6FBC3 /* XYButton */,
+				541F5AA421F1A2E000D6FBC3 /* Util.h */,
+				541F5AA521F1A2E000D6FBC3 /* Util.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		541F5A9C21F1A03000D6FBC3 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				54FDD2DA21F06E2B00F70551 /* AppDelegate.h */,
+				54FDD2DB21F06E2B00F70551 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		541F5A9D21F1A06200D6FBC3 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				541F5A9E21F1A07400D6FBC3 /* Model */,
+				541F5AA021F1A08F00D6FBC3 /* ViewModel */,
+				541F5A9F21F1A08400D6FBC3 /* Controller */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		541F5A9E21F1A07400D6FBC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				541F5AAA21F1ADB100D6FBC3 /* MainModel.h */,
+				541F5AAB21F1ADB100D6FBC3 /* MainModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		541F5A9F21F1A08400D6FBC3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				54FDD2F021F085EA00F70551 /* MainViewController.h */,
+				54FDD2F121F085EA00F70551 /* MainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		541F5AA021F1A08F00D6FBC3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				541F5AA121F1A0CD00D6FBC3 /* MainViewModel.h */,
+				541F5AA221F1A0CD00D6FBC3 /* MainViewModel.m */,
+				541F5AA721F1AD7C00D6FBC3 /* YTOMyOrderCellViewModel.h */,
+				541F5AA821F1AD7C00D6FBC3 /* YTOMyOrderCellViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		54FDD2CE21F06E2A00F70551 = {
 			isa = PBXGroup;
 			children = (
@@ -143,13 +214,10 @@
 			isa = PBXGroup;
 			children = (
 				541F5A8C21F17B6D00D6FBC3 /* YTOConst.h */,
-				541F5A9721F199A000D6FBC3 /* UIView+Extend */,
-				541F5A9321F17C8F00D6FBC3 /* XYButton */,
+				541F5A9C21F1A03000D6FBC3 /* AppDelegate */,
+				541F5A9B21F19FCA00D6FBC3 /* Utils */,
 				541F5A8021F1772700D6FBC3 /* ReusableView */,
-				54FDD2DA21F06E2B00F70551 /* AppDelegate.h */,
-				54FDD2DB21F06E2B00F70551 /* AppDelegate.m */,
-				54FDD2F021F085EA00F70551 /* MainViewController.h */,
-				54FDD2F121F085EA00F70551 /* MainViewController.m */,
+				541F5A9D21F1A06200D6FBC3 /* MVVM */,
 				54FDD2E321F06E6100F70551 /* Assets.xcassets */,
 				54FDD2E821F06E6200F70551 /* Info.plist */,
 				54FDD2E921F06E6200F70551 /* main.m */,
@@ -284,13 +352,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MVVMDemo/Pods-MVVMDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -306,14 +378,18 @@
 			files = (
 				541F5A8921F1789F00D6FBC3 /* BaseTableViewCell.m in Sources */,
 				541F5A9621F17C8F00D6FBC3 /* XYButton.m in Sources */,
+				541F5AA921F1AD7C00D6FBC3 /* YTOMyOrderCellViewModel.m in Sources */,
 				541F5A9A21F199A000D6FBC3 /* UIViewExt.m in Sources */,
 				541F5A8A21F1789F00D6FBC3 /* BaseCollectionViewCell.m in Sources */,
 				541F5A9121F17C2F00D6FBC3 /* MyOrderTableViewCell.m in Sources */,
+				541F5AAC21F1ADB100D6FBC3 /* MainModel.m in Sources */,
 				54FDD2EA21F06E6200F70551 /* main.m in Sources */,
+				541F5AA321F1A0CD00D6FBC3 /* MainViewModel.m in Sources */,
 				541F5A8821F1789F00D6FBC3 /* BaseCellViewModel.m in Sources */,
 				54FDD2F221F085EA00F70551 /* MainViewController.m in Sources */,
 				54FDD2DC21F06E2B00F70551 /* AppDelegate.m in Sources */,
 				541F5A9221F17C2F00D6FBC3 /* MyOrderCellViewModel.m in Sources */,
+				541F5AA621F1A2E000D6FBC3 /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

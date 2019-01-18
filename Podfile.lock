@@ -1,12 +1,18 @@
 PODS:
+  - IQKeyboardManager (5.0.8)
   - ReactiveObjC (3.1.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - IQKeyboardManager
   - ReactiveObjC
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 5147dcb8666d5168843879b777674b4467c06e6f
+PODFILE CHECKSUM: 8c9528ee7ffe659ff3643e9894695dde9c07580d
 
 COCOAPODS: 1.4.0
