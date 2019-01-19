@@ -19,6 +19,7 @@
 		541F5AA621F1A2E000D6FBC3 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5AA521F1A2E000D6FBC3 /* Util.m */; };
 		541F5AA921F1AD7C00D6FBC3 /* YTOMyOrderCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5AA821F1AD7C00D6FBC3 /* YTOMyOrderCellViewModel.m */; };
 		541F5AAC21F1ADB100D6FBC3 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F5AAB21F1ADB100D6FBC3 /* MainModel.m */; };
+		541F5AAE21F2C14F00D6FBC3 /* Order.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 541F5AAD21F2C14E00D6FBC3 /* Order.geojson */; };
 		54FDD2DC21F06E2B00F70551 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDD2DB21F06E2B00F70551 /* AppDelegate.m */; };
 		54FDD2E421F06E6100F70551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FDD2E321F06E6100F70551 /* Assets.xcassets */; };
 		54FDD2EA21F06E6200F70551 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDD2E921F06E6200F70551 /* main.m */; };
@@ -52,6 +53,7 @@
 		541F5AA821F1AD7C00D6FBC3 /* YTOMyOrderCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTOMyOrderCellViewModel.m; sourceTree = "<group>"; };
 		541F5AAA21F1ADB100D6FBC3 /* MainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		541F5AAB21F1ADB100D6FBC3 /* MainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
+		541F5AAD21F2C14E00D6FBC3 /* Order.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Order.geojson; sourceTree = "<group>"; };
 		54FDD2D721F06E2B00F70551 /* MVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FDD2DA21F06E2B00F70551 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54FDD2DB21F06E2B00F70551 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				54FDD2E321F06E6100F70551 /* Assets.xcassets */,
 				54FDD2E821F06E6200F70551 /* Info.plist */,
 				54FDD2E921F06E6200F70551 /* main.m */,
+				541F5AAD21F2C14E00D6FBC3 /* Order.geojson */,
 			);
 			path = MVVMDemo;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				541F5AAE21F2C14F00D6FBC3 /* Order.geojson in Resources */,
 				54FDD2E421F06E6100F70551 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +357,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MVVMDemo/Pods-MVVMDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
@@ -361,6 +366,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);

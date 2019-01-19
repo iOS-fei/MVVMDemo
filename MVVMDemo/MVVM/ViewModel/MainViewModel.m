@@ -7,6 +7,7 @@
 //
 
 #import "MainViewModel.h"
+#import "YTOConst.h"
 #import "MainModel.h"
 #import "YTOMyOrderCellViewModel.h"
 @interface MainViewModel ()
@@ -28,12 +29,13 @@
 
 - (void)configListArr
 {
-    for (int i = 0; i < 15; i++) {
-        MainModel *mainModel = [[MainModel alloc] init];
-        mainModel.server_hawbcode = @"G123456789";
-        mainModel.placeholder = [NSString stringWithFormat:@"我是placeholder_%d",i];
-        mainModel.address = @"收件地址 : gitHub是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名gitHub。gitHub于2008年4月10日正式上线";
-        mainModel.pasteIconName = @"copyIcon";
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Order" ofType:@"geojson"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    NSArray *ordersArr = [dic objectForKey:@"orders"];
+    NSMutableArray <MainModel *> *orders = [MainModel mj_objectArrayWithKeyValuesArray:ordersArr];
+    for (int i = 0; i < orders.count; i++) {
+        MainModel *mainModel = orders[i];
         YTOMyOrderCellViewModel *cellViewModel = [YTOMyOrderCellViewModel modelWithMainModel:mainModel];
         [self.listArr addObject:cellViewModel];
     }

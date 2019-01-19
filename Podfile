@@ -4,4 +4,5 @@ target 'MVVMDemo' do
   pod 'ReactiveObjC'
   pod 'SVProgressHUD'
   pod 'IQKeyboardManager'
+  pod 'MJExtension'
 end
