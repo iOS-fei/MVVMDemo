@@ -6,3 +6,5 @@
 * 实现UI组件级别的**单元测试**，而不需要复杂的Mock。
 ## UML架构图
 ![Image text](https://github.com/iOS-fei/MVVMDemo/blob/master/img-folder/Snip20190118_2.png)
+## 鸣谢
+* 在此特别感谢美团的宁哥为我提出许多宝贵的意见
