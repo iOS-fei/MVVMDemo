@@ -12,19 +12,19 @@
 * 由于“绑定”关系是通过三方框架建立的，绑定的结果是可信的。因此只需要测试到ViewModel一级，就可以覆盖业务逻辑在UI上的体现。又由于ViewModel本身都是普通Objective-C对象，不需要复杂的Mock就可以运行，所以更容易进行单元测试。
 * 本文的例子可能举得不合适，不符合正常的开发场景。希望不影响理解。
 ```
-- (void)testExample {
+- (void)testExample 
+{
+    MainViewModel *mainVM = [[MainViewModel alloc] init];
+    NSMutableArray *listArr = [mainVM valueForKey:@"listArr"];
 
-MainViewModel *mainVM = [[MainViewModel alloc] init];
-NSMutableArray *listArr = [mainVM valueForKey:@"listArr"];
+    [mainVM requestSuccessBlock:^(id  _Nonnull data) {
 
-[mainVM requestSuccessBlock:^(id  _Nonnull data) {
-
-} failureBlock:^(NSString * _Nonnull errorMsg) {
-XCTAssertEqualObjects(errorMsg, @"123");
-}];
-[mainVM didSelectRowWithIndex:2];
-YTOMyOrderCellViewModel *cellVM = listArr[2];
-XCTAssertEqualObjects(cellVM.mainModel.address, @"我是会改变的!");
+    } failureBlock:^(NSString * _Nonnull errorMsg) {
+    XCTAssertEqualObjects(errorMsg, @"123");
+    }];
+    [mainVM didSelectRowWithIndex:2];
+    YTOMyOrderCellViewModel *cellVM = listArr[2];
+    XCTAssertEqualObjects(cellVM.mainModel.address, @"我是会改变的!");
 }
 ```
 ## 鸣谢
