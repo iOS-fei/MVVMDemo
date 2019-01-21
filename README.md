@@ -6,9 +6,10 @@
 * 实现**代码复用**，有利于开发业务无关UI组件。
 * 实现UI组件级别的**单元测试**，而不需要复杂的Mock。
 ## UML架构图
+* **代码复用** - ViewModel与View之间的耦合关系更加松散，从而可以实现View的复用。
 ![Image text](https://github.com/iOS-fei/MVVMDemo/blob/master/img-folder/Snip20190118_2.png)
 ## 单元测试
-* 这里我写的Demo比较抽象，但是不影响理解。
+* 由于“绑定”关系是通过三方框架建立的，绑定的结果是可信的。因此只需要测试到ViewModel一级，就可以覆盖业务逻辑在UI上的体现。又由于ViewModel本身都是普通Objective-C对象，不需要复杂的Mock就可以运行，所以更容易进行单元测试。
 ```
 - (void)testExample {
 
