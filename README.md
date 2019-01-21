@@ -8,6 +8,7 @@
 ## UML架构图
 ![Image text](https://github.com/iOS-fei/MVVMDemo/blob/master/img-folder/Snip20190118_2.png)
 ## 单元测试
+* 这里我写的Demo比较抽象，但是不影响理解。
 ```
 - (void)testExample {
 
