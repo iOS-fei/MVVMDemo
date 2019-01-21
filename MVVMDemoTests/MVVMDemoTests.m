@@ -10,7 +10,6 @@
 #import "MainViewModel.h"
 #import "YTOMyOrderCellViewModel.h"
 #import "MainModel.h"
-#import "ReactiveObjC.h"
 @interface MVVMDemoTests : XCTestCase
 
 @end
@@ -33,7 +32,7 @@
     [mainVM requestSuccessBlock:^(id  _Nonnull data) {
 
     } failureBlock:^(NSString * _Nonnull errorMsg) {
-        XCTAssertEqualObjects(errorMsg, @"123");
+        XCTAssertEqualObjects(errorMsg, @"修改收件地址成功!");
     }];
     [mainVM didSelectRowWithIndex:2];
     YTOMyOrderCellViewModel *cellVM = listArr[2];

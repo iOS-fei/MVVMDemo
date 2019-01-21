@@ -6,3 +6,7 @@ target 'MVVMDemo' do
   pod 'IQKeyboardManager'
   pod 'MJExtension'
 end
+target 'MVVMDemoTests' do
+   pod 'ReactiveObjC'
+    
+end
